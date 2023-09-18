@@ -17,16 +17,16 @@
     #>
 
 
-Import-Module "C:\VSCODE_REPO\PSSAT_DEMO\DEMO_MODULES_BATCHNG.psm1" -DisableNameChecking -Force    
+Import-Module ".\PSSAT\DEMO_MODULES_BATCHNG.psm1" -DisableNameChecking -Force    
 
 #endregion
 
 #region authentication
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
-$TenantName = "8knn7n.onmicrosoft.com"
-$ClientId = "31813526-8b8b-444b-92ac-2b8f4a5bd281"
-$ClientSecret = Get-Secret -Name PSSAT -AsPlainText
+$TenantName = "tenant.onmicrosoft.com"
+$ClientId = ""
+$ClientSecret = Get-Secret -Name mysecretstore -AsPlainText
 
 $token = Request-AccessToken -TenantName "$TenantName" -ClientId "$ClientId" -ClientSecret "$ClientSecret"  
 $securestring = ConvertTo-SecureString -AsPlainText  $token -Force

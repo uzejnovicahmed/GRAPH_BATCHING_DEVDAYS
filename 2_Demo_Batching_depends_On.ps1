@@ -1,4 +1,4 @@
-Import-Module "C:\VSCODE_REPO\PSSAT_DEMO\DEMO_MODULES_BATCHNG.psm1" -DisableNameChecking -Force    
+Import-Module ".\PSSAT\DEMO_MODULES_BATCHNG.psm1" -DisableNameChecking -Force    -DisableNameChecking -Force    
 
 
 $TenantName = "tenant.onmicrosoft.com"
